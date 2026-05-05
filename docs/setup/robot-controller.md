@@ -6,7 +6,17 @@ icon: lucide/computer
 
 The robot controller is how the code gets ran on the bot. It takes your Java, C, Python, etc and executes it and talks to the motors and sensors to make it move.
 
-## The RoboRIO
+## Systemcore
+
+Starting from 2027's kickoff, Systemcore will be the only allowed robot controller, entirely replacing the RoboRIO for FRC teams. It is currently in alpha testing with a limited set of FRC and FTC teams.
+
+It's not entirely known how the setup process will work for Systemcore firmware updates when its moved out of alpha, but it's assumed that it will be either updated through the web UI or still based on SD card flashing (like the RoboRIO 2.0 below).
+
+The Systemcore will simplify many parts of the process, including networking in the shop (due to its onboard 2.4ghz radio) and built-in vision processing (provided by Limelight), however due to its limited availability it is impossible to write comprehensive documentation for. Therefore, most of this documentation has been written with the RoboRIO in mind.
+
+## RoboRIO 1.0 and 2.0 (⚠️ Legacy)
+
+The RoboRIO was the robot controller for the 2026 season (and offseason) and most seasons in working memory beforehand.
 
 Depending on which version of the RoboRIO your team owns, the imaging process is fundamentally different. 
 
@@ -52,37 +62,7 @@ When you image an SD card for a RIO 2.0, the card is partitioned into several se
 
 **Never** try to drag-and-drop files onto the SD card through Windows Explorer. Always use a proper imaging tool (Balena Etcher) to ensure the partitions are aligned correctly.
 
----
-
-## The Future
-
-Starting in 2027, the FRC control system is evolving into **SystemCore**. This is more than just a CPU update; it is a unified robotics controller.
-
-<div class="grid cards" markdown>
-
--   :material-camera: **Integrated Vision**
-    
-    ---
-    SystemCore is designed to handle onboard vision processing natively, potentially reducing the need for external Orange Pis or Rubik Pis.
-
--   :material-web: **Web-Based Setup**
-    
-    ---
-    Expect a move away from standalone "Imaging Tools" toward a modern web interface. You will likely configure your team number and firmware via a browser-based dashboard hosted directly on the device.
-
--   :material-expansion-card: **Built-in IMU**
-    
-    ---
-    High-fidelity motion tracking (similar to a Pigeon or NavX) is planned to be built directly into the SystemCore hardware, simplifying the CAN bus.
-
-</div>
-
-!!! info "Alpha Testing"
-    SystemCore is currently in Alpha testing with 50 teams globally. While the RoboRIO will remain legal for the near future, the transition to SystemCore will represent a "software-first" shift in how we think about robot control.
-
----
-
-## Common Troubleshooting
+### Common Troubleshooting
 
 *   **RIO 1 Not Showing Up:** Ensure you are using a data-ready USB-B cable. Some cheap cables only provide power.
 *   **"Unteathered" Imaging:** You cannot image a RIO over Wi-Fi. Always use USB or Ethernet.
