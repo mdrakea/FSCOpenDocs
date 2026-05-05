@@ -6,6 +6,8 @@ icon: lucide/computer
 
 The robot controller is how the code gets ran on the bot. It takes your Java, C, Python, etc and executes it and talks to the motors and sensors to make it move.
 
+Please note that for FSC's unofficial offseason events (SCRIW and SCRAP) both the RoboRIO and Systemcore will be competition-legal.
+
 ## Systemcore
 
 Starting from 2027's kickoff, Systemcore will be the only allowed robot controller, entirely replacing the RoboRIO for FRC teams. It is currently in alpha testing with a limited set of FRC and FTC teams.
@@ -16,7 +18,7 @@ The Systemcore will simplify many parts of the process, including networking in 
 
 ## RoboRIO 1.0 and 2.0 (⚠️ Legacy)
 
-The RoboRIO was the robot controller for the 2026 season (and offseason) and most seasons in working memory beforehand.
+The RoboRIO was the robot controller from 2015 to 2026.
 
 Depending on which version of the RoboRIO your team owns, the imaging process is fundamentally different. 
 
